@@ -1,0 +1,15 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Flask
+instance/
+*.db
+
+# React
+node_modules/
+dist/
+
+# Environment
+.env

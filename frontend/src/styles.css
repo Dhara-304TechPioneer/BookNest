@@ -1,0 +1,99 @@
+:root{
+  --bg: #eef6f8;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #0f766e;
+  --accent-2: #115e59;
+  --danger:#c62828;
+  --glass: rgba(255,255,255,0.6);
+  --radius: 14px;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:Inter, 'Segoe UI', Roboto, Arial, sans-serif;color:#0f172a}
+
+.app-wrap{min-height:100vh}
+
+/* Hero */
+.hero{background:linear-gradient(135deg, #e6f7f6 0%, #f3fbff 100%);padding:40px 0 28px;}
+.hero-inner{max-width:1100px;margin:0 auto;padding:18px 24px;border-radius:18px}
+.brand{font-size:32px;margin:0;color:var(--accent-2)}
+.lead{margin:6px 0 0;font-size:18px;color:#0b5560}
+.tag{margin:8px 0 0;color:var(--muted);font-weight:600}
+
+.container{max-width:1100px;margin:24px auto;padding:0 18px}
+
+/* Top controls */
+.top-controls{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:20px}
+.search-filter{display:flex;gap:12px;align-items:center}
+.input-search{padding:10px 14px;border-radius:12px;border:1px solid rgba(15,23,42,0.06);min-width:220px;background:#fff}
+.select-filter{padding:10px 12px;border-radius:10px;border:1px solid rgba(15,23,42,0.06);background:#fff}
+
+.stat-cards{display:flex;gap:12px}
+.stat-card{background:var(--card);padding:12px 18px;border-radius:12px;box-shadow:0 8px 20px rgba(15,23,42,0.06);min-width:120px;text-align:center}
+.stat-value{font-weight:800;font-size:18px;color:var(--accent-2)}
+.stat-label{font-size:12px;color:var(--muted);margin-top:6px}
+
+/* Main grid */
+.main-grid{display:grid;grid-template-columns:360px 1fr;gap:20px}
+.panel{min-height:420px}
+
+/* Cards */
+.card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 10px 30px rgba(15,23,42,0.06)}
+
+/* Form */
+.form-head{margin-bottom:8px}
+.form-title{margin:0;font-size:18px;color:#0b5560}
+.form-sub{margin:6px 0 0;font-size:13px;color:var(--muted)}
+.book-form{display:grid;grid-template-columns:1fr;gap:12px}
+.row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.row.small{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:end;gap:12px}
+.field{width:100%;display:flex;flex-direction:column;gap:6px}
+.field label{font-size:13px;color:var(--muted)}
+.field input,.field select{width:100%;padding:10px 12px;border-radius:10px;border:1px solid rgba(15,23,42,0.06);background:#fff}
+.actions-right{display:flex;gap:10px;align-items:center}
+.btn{padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+.btn-primary{background:var(--accent);color:white}
+.btn-ghost{background:#f3f4f6;color:#111;border:1px solid rgba(15,23,42,0.04)}
+
+/* Book cards list */
+.list-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.book-card{display:flex;flex-direction:column;justify-content:space-between;gap:12px;padding:16px}
+.book-info{flex:1}
+.book-title{margin:0;font-size:16px;color:#052f2d}
+.book-author{margin:6px 0 0;color:var(--muted);font-size:13px}
+.book-meta{margin:8px 0 0;color:var(--muted);font-size:13px}
+.pill{display:inline-block;background:rgba(11,86,96,0.06);color:#065f59;padding:4px 8px;border-radius:999px;font-size:12px;margin-left:8px}
+.book-right{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.book-rating{font-weight:700;color:var(--accent-2)}
+.card-actions{display:flex;gap:8px}
+.btn-outline{background:transparent;border:1px solid rgba(15,23,42,0.08);color:#0b5560;padding:8px 12px;border-radius:10px}
+.btn-danger{background:transparent;border:1px solid var(--danger);color:var(--danger);padding:8px 12px;border-radius:10px}
+.btn-outline:hover{background:rgba(15,23,42,0.02)}
+.btn-danger:hover{background:rgba(198,40,40,0.06)}
+
+/* Empty state */
+.empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px}
+.empty-emoji{font-size:36px;margin-bottom:12px}
+.empty-state h3{margin:0 0 8px}
+.empty-state p{margin:0;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:1000px){
+  .main-grid{grid-template-columns:1fr}
+  .panel{min-height:auto}
+}
+
+@media (max-width:520px){
+  .top-controls{flex-direction:column;align-items:stretch}
+  .stat-cards{justify-content:space-between}
+  .search-filter{width:100%}
+  .input-search{width:100%}
+}
+
+@media (max-width:740px){
+  .row,
+  .row.small{
+    grid-template-columns:1fr;
+  }
+}
